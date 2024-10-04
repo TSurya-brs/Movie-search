@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7322684d64.js" crossorigin="anonymous"></script>
+    <title>Movie Search</title>
+    <link rel="icon" href="https://203.193.173.125/buildriseshine/favicon.png" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<main role="main" class="container pt-5">
+    <header><h1>Movie Search</h1></header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <input class="form-control mr-sm-2" type="text" id="name" placeholder="Search for Movie Name" required autofocus>
+            <button class="btn btn-primary my-2 my-sm-0" type="button" onclick="showCovers()">Search</button>
+        </div>
+    </nav>
+    <div class="d-flex align-items-center justify-content-center mt-5">
+        <div class="spinner-border text-success" style="display: none;" id="load" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div id="movies" class="row">
+    </div>
+    <div class="modal" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                    <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body col">
+                    <div id="divImagen" class="col-6 col-md-5">
+                        <img id="img" alt="Movie Image" class="img-fluid">
+                    </div>
+                    <div id="descripcion" class="col-6 col-md-7">
+                        <label><strong>Genre</strong></label>
+                        <p id="genre"></p>
+                        <label><strong>Release</strong></label>
+                        <p id="release"></p>
+                        <label><strong>Director</strong></label>
+                        <p id="director"></p>
+                        <label><strong>Writer</strong></label>
+                        <p id="writer"></p>
+                        <label><strong>Actors</strong></label>
+                        <p id="actors"></p>
+                        <label><strong>Plot</strong></label>
+                        <p id="plot"></p>
+                        <label><strong>Rating</strong></label>
+                        <div>
+                            <i id="star1" class="far fa-star"></i>
+                            <i id="star2" class="far fa-star"></i>
+                            <i id="star3" class="far fa-star"></i>
+                            <i id="star4" class="far fa-star"></i>
+                            <i id="star5" class="far fa-star"></i>
+                            <span class="badge badge-info" id="numPuntuacion"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="assets/js/script.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
